@@ -16,9 +16,11 @@ suspend fun searchForMovie(query: String): List<Map<String, String>> {
         .toList()
 
     return torrents
+        .filter { it.seeds > 0 }
         .sortedByDescending { it.seeds }
-        .take(10)
+        .take(5)
         .mapNotNull { torrent ->
+            println(">>>>>>>>>>>>>>>>>>>>>> ${torrent.magnetUrl}")
             val magnetHash = extractMagnetHash(torrent.magnetUrl!!)
             magnetHash?.let { hash ->
                 mapOf(
