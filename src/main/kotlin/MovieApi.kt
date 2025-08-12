@@ -9,8 +9,7 @@ suspend fun searchForMovie(query: String): List<Map<String, String>> {
 
     val torrents = torrentSearch.search {
         content = query
-        limit = 2
-        category = Category.VIDEO
+        category = Category.ALL
     }.torrents()
         .filter { !it.magnetUrl.isNullOrBlank() }
         .toList()

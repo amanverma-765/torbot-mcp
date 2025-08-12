@@ -12,8 +12,8 @@ import kotlinx.io.buffered
 fun startMcpServer() {
     val server = Server(
         serverInfo = Implementation(
-            name = "movie-mcp-server",
-            version = "1.0.0"
+            name = "movie-anime-downloader-server",
+            version = "1.2.0"
         ),
         options = ServerOptions(
             capabilities = ServerCapabilities(

@@ -13,7 +13,7 @@ fun registerTools(server: Server) {
     server.addTool(
         name = "movies_and_anime_downloader",
         description = """
-        🎬 Search movies & anime by name or keywords.
+        🎬 Download movies & anime by name or keywords.
         📥 Download instantly in high quality.
         📺 Stream live without waiting.
     """.trimIndent(),
@@ -21,7 +21,7 @@ fun registerTools(server: Server) {
             properties = buildJsonObject {
                 putJsonObject("query") {
                     put("type", "string")
-                    put("description", "The movie or anime name or keywords to search for.")
+                    put("description", "use when user input is not a valid URL and doesnt starts with http:// or httos://. The user sent keywords to download.")
                 }
             },
             required = listOf("query")
