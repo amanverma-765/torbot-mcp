@@ -11,11 +11,11 @@ import kotlinx.io.buffered
 
 fun startMcpServer() {
     val server = Server(
-        Implementation(
+        serverInfo = Implementation(
             name = "movie-mcp-server",
             version = "1.0.0"
         ),
-        ServerOptions(
+        options = ServerOptions(
             capabilities = ServerCapabilities(
                 tools = ServerCapabilities.Tools(
                     listChanged = true

@@ -17,7 +17,7 @@ suspend fun searchForMovie(query: String): List<Map<String, String>> {
 
     return torrents
         .sortedByDescending { it.seeds }
-        .take(5)
+        .take(10)
         .mapNotNull { torrent ->
             val magnetHash = extractMagnetHash(torrent.magnetUrl!!)
             magnetHash?.let { hash ->

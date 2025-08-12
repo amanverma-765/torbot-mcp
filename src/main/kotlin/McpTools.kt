@@ -11,7 +11,7 @@ import util.About
 
 fun registerTools(server: Server) {
     server.addTool(
-        name = "search_for_movies",
+        name = "movies_and_anime_downloader",
         description = """
         🎬 Search movies & anime by name or keywords.
         📥 Download instantly in high quality.
